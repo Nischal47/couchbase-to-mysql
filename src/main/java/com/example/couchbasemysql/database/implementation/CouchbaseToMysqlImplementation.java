@@ -69,17 +69,17 @@ public class CouchbaseToMysqlImplementation implements CouchbaseToMysql {
                 mysqlDatabase.executeUpdate("INSERT INTO " + "tables " + Util.buildInsertTable(jRecord)
                         + " ON DUPLICATE KEY UPDATE " + Util.buildUpdateTable(jRecord, jRecord.getString("id")));
             }
-//            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `tables`");
-//            int i = 1;
-//            for (String mysql:mysqlData){
-//                JSONObject jRecord = new JSONObject(mysql);
-//                couchbaseDatabase.setBucket("getting-started-db");
-//                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
-//                if(cb == null || cb.isEmpty()) {
-//                    mysqlDatabase.executeUpdate("DELETE FROM tables WHERE id = \"" + jRecord.getString("id") + "\"");
-//                    System.out.println("Deleted");
-//                }
-//            }
+            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `tables`");
+            int i = 1;
+            for (String mysql:mysqlData){
+                JSONObject jRecord = new JSONObject(mysql);
+                couchbaseDatabase.setBucket("getting-started-db");
+                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
+                if(cb == null || cb.isEmpty()) {
+                    mysqlDatabase.executeUpdate("DELETE FROM tables WHERE id = \"" + jRecord.getString("id") + "\"");
+                    System.out.println("Deleted");
+                }
+            }
         } finally {
             mysqlDatabase.close();
             couchbaseDatabase.disconnect();
@@ -99,17 +99,17 @@ public class CouchbaseToMysqlImplementation implements CouchbaseToMysql {
                 mysqlDatabase.executeUpdate("INSERT INTO " + "category " + Util.buildInsertCategory(jRecord)
                         + " ON DUPLICATE KEY UPDATE " + Util.buildUpdateCategory(jRecord, jRecord.getString("id")));
             }
-//            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `category`");
-//            int i = 1;
-//            for (String mysql:mysqlData){
-//                JSONObject jRecord = new JSONObject(mysql);
-//                couchbaseDatabase.setBucket("getting-started-db");
-//                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
-//                if(cb == null || cb.isEmpty()) {
-//                    mysqlDatabase.executeUpdate("DELETE FROM tables WHERE id = \"" + jRecord.getString("id") + "\"");
-//                    System.out.println("Deleted");
-//                }
-//            }
+            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `category`");
+            int i = 1;
+            for (String mysql:mysqlData){
+                JSONObject jRecord = new JSONObject(mysql);
+                couchbaseDatabase.setBucket("getting-started-db");
+                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
+                if(cb == null || cb.isEmpty()) {
+                    mysqlDatabase.executeUpdate("DELETE FROM tables WHERE id = \"" + jRecord.getString("id") + "\"");
+                    System.out.println("Deleted");
+                }
+            }
         } finally {
             mysqlDatabase.close();
             couchbaseDatabase.disconnect();
@@ -129,17 +129,17 @@ public class CouchbaseToMysqlImplementation implements CouchbaseToMysql {
                 mysqlDatabase.executeUpdate("INSERT INTO `group` " + Util.buildInsertGroup(jRecord)
                         + " ON DUPLICATE KEY UPDATE " + Util.buildUpdateGroup(jRecord, jRecord.getString("id")));
             }
-//            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `group`");
-//            int i = 1;
-//            for (String mysql:mysqlData){
-//                JSONObject jRecord = new JSONObject(mysql);
-//                couchbaseDatabase.setBucket("getting-started-db");
-//                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
-//                if(cb == null || cb.isEmpty()) {
-//                    mysqlDatabase.executeUpdate("DELETE FROM group WHERE id = \"" + jRecord.getString("id") + "\"");
-//                    System.out.println("Deleted");
-//                }
-//            }
+            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `group`");
+            int i = 1;
+            for (String mysql:mysqlData){
+                JSONObject jRecord = new JSONObject(mysql);
+                couchbaseDatabase.setBucket("getting-started-db");
+                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
+                if(cb == null || cb.isEmpty()) {
+                    mysqlDatabase.executeUpdate("DELETE FROM group WHERE id = \"" + jRecord.getString("id") + "\"");
+                    System.out.println("Deleted");
+                }
+            }
         } finally {
             mysqlDatabase.close();
             couchbaseDatabase.disconnect();
@@ -159,17 +159,17 @@ public class CouchbaseToMysqlImplementation implements CouchbaseToMysql {
                 mysqlDatabase.executeUpdate("INSERT INTO " + "menu_item " + Util.buildInsertItem(jRecord)
                         + " ON DUPLICATE KEY UPDATE " + Util.buildUpdateItem(jRecord, jRecord.getString("id")));
             }
-//            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `menu_item`");
-//            int i = 1;
-//            for (String mysql:mysqlData){
-//                JSONObject jRecord = new JSONObject(mysql);
-//                couchbaseDatabase.setBucket("getting-started-db");
-//                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
-//                if(cb == null || cb.isEmpty()) {
-//                    mysqlDatabase.executeUpdate("DELETE FROM menu_item WHERE id = \"" + jRecord.getString("id") + "\"");
-//                    System.out.println("Deleted");
-//                }
-//            }
+            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `menu_item`");
+            int i = 1;
+            for (String mysql:mysqlData){
+                JSONObject jRecord = new JSONObject(mysql);
+                couchbaseDatabase.setBucket("getting-started-db");
+                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
+                if(cb == null || cb.isEmpty()) {
+                    mysqlDatabase.executeUpdate("DELETE FROM menu_item WHERE id = \"" + jRecord.getString("id") + "\"");
+                    System.out.println("Deleted");
+                }
+            }
         } finally {
             mysqlDatabase.close();
             couchbaseDatabase.disconnect();
@@ -189,17 +189,17 @@ public class CouchbaseToMysqlImplementation implements CouchbaseToMysql {
                 mysqlDatabase.executeUpdate("INSERT INTO `order` " + Util.buildInsertOrder(jRecord)
                         + " ON DUPLICATE KEY UPDATE " + Util.buildUpdateOrder(jRecord, jRecord.getString("id")));
             }
-//            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `order`");
-//            int i = 1;
-//            for (String mysql:mysqlData){
-//                JSONObject jRecord = new JSONObject(mysql);
-//                couchbaseDatabase.setBucket("getting-started-db");
-//                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
-//                if(cb == null || cb.isEmpty()) {
-//                    mysqlDatabase.executeUpdate("DELETE FROM order WHERE id = \"" + jRecord.getString("id") + "\"");
-//                    System.out.println("Deleted");
-//                }
-//            }
+            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `order`");
+            int i = 1;
+            for (String mysql:mysqlData){
+                JSONObject jRecord = new JSONObject(mysql);
+                couchbaseDatabase.setBucket("getting-started-db");
+                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
+                if(cb == null || cb.isEmpty()) {
+                    mysqlDatabase.executeUpdate("DELETE FROM order WHERE id = \"" + jRecord.getString("id") + "\"");
+                    System.out.println("Deleted");
+                }
+            }
         } finally {
             mysqlDatabase.close();
             couchbaseDatabase.disconnect();
@@ -219,17 +219,17 @@ public class CouchbaseToMysqlImplementation implements CouchbaseToMysql {
                 mysqlDatabase.executeUpdate("INSERT INTO table_category" + Util.buildInsertTableCategory(jRecord)
                         + " ON DUPLICATE KEY UPDATE " + Util.buildUpdateTableCategory(jRecord, jRecord.getString("id")));
             }
-//            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `table_category`");
-//            int i = 1;
-//            for (String mysql:mysqlData){
-//                JSONObject jRecord = new JSONObject(mysql);
-//                couchbaseDatabase.setBucket("getting-started-db");
-//                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
-//                if(cb == null || cb.isEmpty()) {
-//                    mysqlDatabase.executeUpdate("DELETE FROM table_category WHERE id = \"" + jRecord.getString("id") + "\"");
-//                    System.out.println("Deleted");
-//                }
-//            }
+            List<String> mysqlData = mysqlDatabase.executeQuery("select * from `table_category`");
+            int i = 1;
+            for (String mysql:mysqlData){
+                JSONObject jRecord = new JSONObject(mysql);
+                couchbaseDatabase.setBucket("getting-started-db");
+                List<String> cb = couchbaseDatabase.query(" WHERE id =\""+jRecord.getString("id")+"\"");
+                if(cb == null || cb.isEmpty()) {
+                    mysqlDatabase.executeUpdate("DELETE FROM table_category WHERE id = \"" + jRecord.getString("id") + "\"");
+                    System.out.println("Deleted");
+                }
+            }
         } finally {
             mysqlDatabase.close();
             couchbaseDatabase.disconnect();
