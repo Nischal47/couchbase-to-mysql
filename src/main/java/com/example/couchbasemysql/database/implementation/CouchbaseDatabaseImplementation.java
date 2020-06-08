@@ -2,7 +2,6 @@ package com.example.couchbasemysql.database.implementation;
 
 
 
-import com.couchbase.client.core.msg.query.QueryRequest;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.Collection;
@@ -24,7 +23,7 @@ public class CouchbaseDatabaseImplementation implements com.example.couchbasemys
 
     @Override
     public void setBucket(String bucketName) {
-        cluster = Cluster.connect("127.0.0.2", "getting-started-db", "Nepal!23");
+        cluster = Cluster.connect("127.0.0.1", "getting-started-db", "Nepal!23");
         this.bucketName = bucketName;
         bucket = cluster.bucket(bucketName);
         collection = bucket.defaultCollection();
@@ -62,7 +61,7 @@ public class CouchbaseDatabaseImplementation implements com.example.couchbasemys
     public List<String> getCouchbaseData(String id){
         List<String> data = null;
         CouchbaseDatabaseImplementation couchbaseDatabase = new CouchbaseDatabaseImplementation();
-        couchbaseDatabase.setBucket("getting-started-db");
+        couchbaseDatabase.setBucket("getting-started-bucket");
         data = couchbaseDatabase.query(" WHERE type = \"table\"",JsonObject.create().put("id",id));
         return data;
     }

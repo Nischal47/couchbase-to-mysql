@@ -11,4 +11,5 @@ public interface CouchbaseToMysql {
     void upsertItemToMysql(List<String> data);
     void upsertOrderToMysql(List<String> data);
     void upsertTablesCategoryToMysql(List<String> data);
+    void upsertBillToMysql(List<String> data);
 }

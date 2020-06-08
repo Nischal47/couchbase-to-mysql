@@ -23,8 +23,8 @@ public class MysqlDatabaseImplementation implements MysqlDatabase {
 
     public MysqlDatabaseImplementation(){
         try{
-            Class.forName("com.mysql.jdbc.Driver");
-            String dbURL = "jdbc:mysql://localhost:3306/restro_bytes";
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            String dbURL = "jdbc:mysql://localhost:3306/restro_bytes?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
             connection = DriverManager.getConnection(dbURL, "root", "admin");
         } catch (SQLException | ClassNotFoundException sqlException) {
             logger.error(sqlException.getMessage(), sqlException);

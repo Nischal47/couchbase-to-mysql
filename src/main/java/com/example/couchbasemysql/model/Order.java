@@ -1,16 +1,14 @@
 package com.example.couchbasemysql.model;
 
 public class Order {
-
+    String id;
     String status;
     String item;
     String itemName;
-    String id;
     String description;
     Integer quantity;
     Long time;
     Double price;
-    String group;
     Boolean complement;
 
     public Order(){
@@ -26,7 +24,6 @@ public class Order {
         this.quantity = quantity;
         this.time = time;
         this.price = price;
-        this.group = group;
         this.complement = complement;
     }
 

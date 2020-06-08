@@ -16,10 +16,10 @@ public class CouchbaseMysqlApplication {
 
 	@GetMapping("/")
 	public String index() {
-		return "Welcome to MySQL - Couchbase Sync";
+		return "Welcome - Couchbase Sync";
 	}
 
-	@GetMapping("/sync-ms")
+	@GetMapping("/sync-mc")
 	public String syncCBToMS() {
 		new CouchbaseToMysqlImplementation().couchbaseToMysql();
 		return "Couch Base to MySQL\n\nCheck MySQL Database";
